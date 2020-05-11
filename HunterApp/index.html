@@ -1,56 +1,33 @@
-<!DOCTYPE HTML>
-<html>
-<head> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<HTML>
+<HEAD>
+<TITLE>Hunter's App</TITLE>
     <link rel="shortcut icon" href="https://www.pinclipart.com/picdir/middle/84-842615_pokeball-icon-clipart.png">
-	<meta charset="UTF-8">
-	<title>PPO Hunter's App</title>
 <!-- for styling -->
-    <link rel="stylesheet" href="design.css">
-</head> 
-<body>
-	<div>
-		<div class="split left">
-			<div class="centered">
-				<div>
-					<h2>Hunter's App</h2>
-				</div>
-			Legendless Encounters <br>
-            <input type="text" id="encounterInput" maxlength="6"  size="100">
-            <br>
-				<div class="container">
-							<label><input type="checkbox" id="Shiny"/>Chance of Shiny</label><br><br>
-					<form class="Boosts" id="Boosts">	
-					<table>
-						<tr>
-							<td> 
-					<fieldset>      
-						<legend>Consumables:</legend>
-							<label><input type="checkbox" id="GM"/>GM</label><br>
-							<label><input type="checkbox" id="Honey"/> Honey</label><br>
-					</fieldset>
-							</td>
-							<td>
-					<fieldset>      
-						<legend>Charms:</legend>
-						<label><input type="checkbox" id="HCharm"/>Hunter Charm / (E) Item</label><br>
-						<label><input type="checkbox" id="RCharm"/> Rare Charm</label><br>
-					</fieldset>					
-							</td>
-					</table>
-					</form><br>
-						Boosts:    (AVAILABLE SOON)<br>
-							<label><input type="checkbox" id="Event"/>Event</label>
-							<label><input type="checkbox" id="x2" disabled> x2</label><br>
-					<br>
-				</div>
-			<button onclick="calculate()">Encounter</button>
-            <!-- Legend Chance : <br> -->
-			<h3 id="result"></h3><br><br>
-			</div>
-		</div>
-	</div>
-<script type="text/javascript" src="encounterRate.js">
-</script>
-	<H6><footer>&copy; Dhagz 2020</footer></H6>
-</body> 
-</html>
+	<style>
+		body {
+		font-family: 'Raleway', sans-serif !important;
+        background: url(https://images7.alphacoders.com/549/549807.png);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		}
+	</style>
+</HEAD>
+<FRAMESET cols="21%, 79%">
+  <FRAMESET rows="170, 130">
+      <FRAME src="https://dhagz-hh.github.io/HunterApp/EncounterRate.html" scrolling=no frameborder=0 ">  
+      <FRAME src="https://pokedex.org/#/pokemon/646" scrolling=no frameborder=0 noresize>
+  </FRAMESET>
+  <FRAME src="https://pokemon-planet.com/gameFullscreen.php" scrolling=no frameborder=0 noresize>
+  <NOFRAMES>
+      <P>This frameset document contains:
+      <UL>
+         <LI><A href="https://dhagz-hh.github.io/HunterApp/EncounterRate.html">Some neat contents</A>
+         <LI><IMG src="https://pokedex.org/#/pokemon/646" alt="A neat image">
+         <LI><A href="https://pokemon-planet.com/gameFullscreen.php">Some other neat contents</A>
+      </UL>
+  </NOFRAMES>
+</FRAMESET>
+</HTML>
