@@ -240,6 +240,10 @@
 		} else if (!gmChecked && honeyChecked && !hcChecked && rcChecked && !sChecked && eChecked) {
 			return returnOutput(calculateRate(EVENTHONEYRCHARM, encounterInput))
 
+		// INVALID EVENT + RCHARM + HCHARM
+		} else if (!gmChecked && !honeyChecked && hcChecked && rcChecked && !sChecked && eChecked) {
+			document.getElementById("result").innerHTML="Choose 1 Item only";
+
 		// INVALID EVENT + GM + RCHARM + HCHARM
 		} else if (gmChecked && !honeyChecked && hcChecked && rcChecked && !sChecked && eChecked) {
 			document.getElementById("result").innerHTML="Choose 1 Item only";
