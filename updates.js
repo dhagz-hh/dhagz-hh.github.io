@@ -16,7 +16,8 @@ $(document).ready(function () {
   fetch('https://api.smartable.ai/coronavirus/stats/PH', {headers: headers})
   	.then((resp) => resp.json())
   	.then(data => {
-		let update = data.updatedDateTime;
+  const dateYouNeed = moment(data.updatedDateTime, "YYYY-MM-DDTHH:mm:ss.SSS[Z]").format("MMMM DD, YYYY dddd hh:mm A");
+		let update = dateYouNeed;
 		let cases = numberWithCommas(data.stats.newlyConfirmedCases);
 		let deaths = numberWithCommas(data.stats.newDeaths);
 		let totalcases = numberWithCommas(data.stats.totalConfirmedCases);
