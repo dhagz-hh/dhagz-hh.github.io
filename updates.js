@@ -1,5 +1,4 @@
-(function($) {
-  $(document).ready(function () {
+$(document).ready(function () {
   function createNode(element) {
       return document.createElement(element);
   }
@@ -38,4 +37,3 @@
     console.log(error);
   })
 })
-})(jQuery);
