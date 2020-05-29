@@ -19,9 +19,11 @@
 	div  {
 	color: #DACA69;
 	font-weight: bold;
+	text-align: center
 	}
 	span  {
 	color: #DACA69;
+	text-align: center
 	font-weight: 900;
 	font-size: 25px;
 	}
@@ -32,5 +34,5 @@
 	color: Tomato;
 	}
 	h5 {
-	text-align: right;
+	text-align: left;
 	}
