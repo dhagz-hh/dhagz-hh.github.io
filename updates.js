@@ -27,7 +27,7 @@ $(document).ready(function () {
 
 		document.getElementById("datetime").innerHTML = `${update}`;
 		document.getElementById("coronas").innerHTML = "There are " + `${cases}` +
-		 " confirmed positive to COVID-19, " + `${deaths}` + " deaths and " + `${newrecover}`
+		 " confirmed positive COVID-19 cases, " + `${deaths}` + " deaths and " + `${newrecover}`
 		 + " recovered.";
 		document.getElementById("totalcases").innerHTML = `${totalcases}`;
 		document.getElementById("totaldeaths").innerHTML = `${totaldeaths}`;
