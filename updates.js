@@ -1,9 +1,9 @@
-$(document).ready(function () {
   
-  var yesterdayRecovered = null;
+var yesterdayRecovered = null;
 
-  initYesterdayRecovered();
+initYesterdayRecovered();
 
+$(document).ready(function () {
   function createNode(element) {
 	return document.createElement(element);
   }
@@ -29,6 +29,8 @@ $(document).ready(function () {
 		let totaldeaths = numberWithCommas(data.deaths);
 		let recovered = numberWithCommas(data.recovered);
 		let newrecover = numberWithCommas(data.recovered - yesterdayRecovered);
+
+		console.log(yesterdayRecovered)
 
 		document.getElementById("datetime").innerHTML = `${update}`;
 		document.getElementById("coronas").innerHTML = "There are " + `${cases}` +
