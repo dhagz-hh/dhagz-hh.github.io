@@ -1,24 +1,28 @@
   
 var yesterdayRecovered = null;
 
-initYesterdayRecovered();
-
 $(document).ready(function () {
-  function createNode(element) {
+	initYesterdayRecovered().then(() => {
+		fetchData();
+	});
+})
+
+function createNode(element) {
 	return document.createElement(element);
-  }
+}
 
-  function append(parent, el) {
+function append(parent, el) {
 	return parent.appendChild(el);
-  }
-  
-  function numberWithCommas(x) {
-  	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+}
 
-  const h3 = document.getElementById('coronas');
+function numberWithCommas(x) {
+	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+const h3 = document.getElementById('coronas');
   
-  fetch('https://corona.lmao.ninja/v2/countries/PHL')
+function fetchData() {
+	fetch('https://corona.lmao.ninja/v2/countries/PHL')
   	.then((resp) => resp.json())
   	.then(data => {
   		const dateYouNeed = moment(data.updated).format("MMMM DD, YYYY dddd hh:mm A");
@@ -41,13 +45,13 @@ $(document).ready(function () {
   .catch(function(error) {
     console.log(error);
   })
-})
+}
 
 
 // Initialize yesterdayRecovered
-function initYesterdayRecovered(){
+async function initYesterdayRecovered(){
 
-	fetch('https://corona.lmao.ninja/v2/countries/PHL?yesterday=true')
+	return await fetch('https://corona.lmao.ninja/v2/countries/PHL?yesterday=true')
   	.then((resp) => resp.json())
   	.then(data => {
   		yesterdayRecovered = data.recovered;
