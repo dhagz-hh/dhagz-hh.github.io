@@ -30,8 +30,6 @@ $(document).ready(function () {
 		let recovered = numberWithCommas(data.recovered);
 		let newrecover = numberWithCommas(data.recovered - yesterdayRecovered);
 
-		console.log(yesterdayRecovered)
-
 		document.getElementById("datetime").innerHTML = `${update}`;
 		document.getElementById("coronas").innerHTML = "There are " + `${cases}` +
 		 " confirmed positive COVID-19 cases, " + `${deaths}` + " deaths and " + `${newrecover}`
