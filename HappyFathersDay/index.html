@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dear Papa Noli..</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Happy Father's Day PA!">
+  <meta name="keywords" content="Father's Day, Noli Allera">
+  <meta name="author" content="Dhagz">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    body {
+	    background: url('https://www.ecovelo.com/wp-content/uploads/2019/03/Grey-Background-1024x618.jpg');
+		font-family: 'Raleway', sans-serif !important;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		color: #2554C7;
+		}
+	h3 {
+		margin-right: 300px;
+		margin-left: 300px;
+		}
+  </style>
+</head>
+<body onload="forPapa()">
+<center>
+<iframe width="1" height="1" src="https://www.youtube.com/embed/s1eOuJ-CfLg?autoplay=1"></iframe>
+<img src="https://media.giphy.com/media/l3CcMM01EQ02SI6x0p/giphy.gif" alt="fathers_day" width="250" height="350">
+<h1>To Arnold Allera, my Father!</h1>
+<h3 id="message"></h3><br><br></center>
+<script>
+var i = 0;
+var txt = 'Salamat san imo pag-alagyam sa akon sa waray pili nga higayon, adlaw ngan edad. An imo paghatag sin taas nga pasensya ngan paghatag sa kun ano sa imo kita it pinakamakaupay sa akon; mapa-sagdon man o sa imo mga busa. Salamat san pag-paura ngan pag-hatag san imo kaya para sa akon mga panginahanglan ngan sit akon mga karuyag. Bug-os nga kinabuhi ko nga pasalamatan it Ginoo sa paghatag Niya sin Tatay nga RESPONSABLE, MAKIPAMILYA nga MAALAGYAMON. Salamat PA! :)';
+var speed = 150;
+
+function forPapa() {
+  if (i < txt.length) {
+    document.getElementById("message").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(forPapa, speed);
+  }
+}
+</script>
+</body>
+</html>
