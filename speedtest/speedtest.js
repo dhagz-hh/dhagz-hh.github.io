@@ -1,5 +1,5 @@
 var pic = "testimage.jpg"; 
-var size = 368640;
+var size = 366445;
 var arrTimes = [];
 var i = 0; // start
 var timesToTest = 5;
