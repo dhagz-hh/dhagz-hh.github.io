@@ -1,23 +1,88 @@
-<center>Recommended Speed: 3 mbps
-<h4 id="progress">JavaScript Speed Test</h4></center>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dhagz Gaming Speed Test</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Speed test for gamers.">
+  <meta name="keywords" content="speed test, ping">
+  <meta name="author" content="Dhagz">
+  <meta name="viewport" content="width=device-width"
+<!-- for styling -->
+	<style>
+		body {
+		font-family: 'Raleway', sans-serif !important;
+        background: url(https://images6.alphacoders.com/913/913983.png);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		text-align: center;
+		}
+	</style>
+</head>
+<body>
+<h1>DHAGZ GAMING SPEEDTEST</h1>
 
-<script>alert('beta pala')
-var imageAddr = "https://i.pinimg.com/originals/e5/12/16/e512164f77f6efd7813c74df70f61fbf.jpg"; 
-var downloadSize = 366445; //bytes
+<h5 id="ping"></h6>
+<h4 id="download"></h4>
+<h4 id="progress">Loading Gaming Speed</h4>
+
+<script>
+//download vars
+var pic = "https://i.pinimg.com/originals/e5/12/16/e512164f77f6efd7813c74df70f61fbf.jpg"; 
+var size = 366445; //bytes
+//upload vars
+var arrTimes = [];
+var i = 0; // start
+var timesToTest = 5;
+var tThreshold = 150; //ms
+var testImage = "http://www.google.com/images/phd/px.gif";
+var dummyImage = new Image();
+var stability = 0;
+
+//ping test
+testLatency(function(avg){
+  stability = (avg <= tThreshold);
+//latency output  
+if (i = 12831);
+	document.getElementById("download").innerHTML="Latency: " + "<br>" + (avg.toFixed(2)) + " ms";
+	document.getElementById("ping").innerHTML= "STABLE FOR GAMING: " + stability;
+});
+
+
+function testLatency(cb) {
+  var tStart = new Date().getTime();
+  if (i<timesToTest-1) {
+    dummyImage.src = testImage + '?t=' + tStart;
+    dummyImage.onload = function() {
+      var tEnd = new Date().getTime();
+      var tTimeTook = tEnd-tStart;
+      arrTimes[i] = tTimeTook;
+      testLatency(cb);
+      i++;
+    };
+  } else {
+
+    var sum = arrTimes.reduce(function(a, b) { return a + b; });
+    var avg = sum / arrTimes.length;
+    cb(avg);
+  }
+}
+
 function ShowProgressMessage(msg) {
 if (console) {
 if (typeof msg == "string") {
 console.log(msg);
 } else {
-for (var i = 0; i < msg.length; i++) {
-console.log(msg[i]);
+for (var d = 0; d < msg.length; d++) {
+console.log(msg[d]);
 }
 }
 } 
-var oProgress = document.getElementById("progress");
-if (oProgress) {
+var status = document.getElementById("progress");
+if (status) {
 var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
-oProgress.innerHTML = actualHTML;
+status.innerHTML = actualHTML;
 }
 }
 function InitiateSpeedDetection() {
@@ -30,28 +95,31 @@ window.addEventListener('load', InitiateSpeedDetection, false);
 window.attachEvent('onload', InitiateSpeedDetection);
 }
 function MeasureConnectionSpeed() {
-var startTime, endTime;
+var start, end;
 var download = new Image();
 download.onload = function () {
-endTime = (new Date()).getTime();
+end = (new Date()).getTime();
 showResults();
 }
 download.onerror = function (err, msg) {
 ShowProgressMessage("Testing failed, try again. . .");
 }
-startTime = (new Date()).getTime();
-var cacheBuster = "?nnn=" + startTime;
-download.src = imageAddr + cacheBuster; 
+start = (new Date()).getTime();
+var cacheBuster = "?nnn=" + start;
+download.src = pic + cacheBuster; 
 function showResults() {
-var duration = (endTime - startTime) / 1000;
-var bitsLoaded = downloadSize * 8;
-var speedBps = (bitsLoaded / duration).toFixed(2);
-var speedKbps = (speedBps / 1024).toFixed(2);
-var speedMbps = (speedKbps / 1024).toFixed(2);
+var duration = (end - start) / 1000;
+var bitsLoaded = size * 8;
+var Bps = (bitsLoaded / duration).toFixed(2);
+var Kbps = (Bps / 1024).toFixed(2);
+var Mbps = (Kbps / 1024).toFixed(2);
 ShowProgressMessage([
 "Your speed is:", 
-speedMbps + " mbps"
+Mbps + " mbps"
 ]);
 }
 }
 </script>
+<H6><footer>-- &copy; dhagz 2020 --</footer></H6>
+</body>
+</html>
