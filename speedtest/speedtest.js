@@ -4,7 +4,7 @@ var arrTimes = [];
 var i = 0; // start
 var timesToTest = 5;
 var tThreshold = 150;
-var testImage = "http://www.google.com/images/phd/px.gif";
+var testImage = "px.gif";
 var dummyImage = new Image();
 var stability = 0;
 testLatency(function(avg){
