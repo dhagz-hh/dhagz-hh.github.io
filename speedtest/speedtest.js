@@ -48,7 +48,7 @@ status.innerHTML = actualHTML;
 }
 }
 function InitiateSpeedDetection() {
-ShowProgressMessage("Testing...");
+ShowProgressMessage("Testing Download Speed...");
 window.setTimeout(MeasureConnectionSpeed, 1);
 }; 
 if (window.addEventListener) {
