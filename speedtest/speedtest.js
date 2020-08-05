@@ -12,7 +12,7 @@ testLatency(function(avg){
 //latency output  
 if (i = 12831);
 	document.getElementById("download").innerHTML="Latency: " + "<br>" + (avg.toFixed(2)) + " ms";
-	document.getElementById("ping").innerHTML= "STABLE FOR GAMING: " + stability;
+		document.getElementById("ping").innerHTML= "STABLE CONNECTION: " + stability;
 });
 function testLatency(cb) {
   var tStart = new Date().getTime();
