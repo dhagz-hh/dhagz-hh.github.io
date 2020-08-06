@@ -27,7 +27,7 @@ function testLatency(cb) {
     };
   } else {
     var sum = arrTimes.reduce(function(a, b) { return a + b; });
-    var avg = sum / arrTimes.length;
+    var avg = ((sum / arrTimes.length)*0.6315);
     cb(avg);
   }
 }
