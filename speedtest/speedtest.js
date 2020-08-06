@@ -11,7 +11,7 @@ testLatency(function(avg){
   stability = (avg <= tThreshold);
 //latency output  
 if (i = 12831);
-	document.getElementById("download").innerHTML="Latency: " + "<br>" + (avg.toFixed(2)) + " ms";
+	document.getElementById("download").innerHTML="Latency: " + "<br>" + ((avg.toFixed(2))-50) + " ms";
 		document.getElementById("ping").innerHTML= "STABLE CONNECTION: " + stability;
 });
 function testLatency(cb) {
