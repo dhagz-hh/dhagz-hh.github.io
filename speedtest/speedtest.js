@@ -1,5 +1,5 @@
 var pic = "charles-deluvio-GTUwF3agcI0-unsplash.jpg"; 
-var size = 661000;
+var size = 661;
 var arrTimes = [];
 var i = 0; // start
 var timesToTest = 5;
