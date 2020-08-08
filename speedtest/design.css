@@ -7,6 +7,26 @@ background-position: center;
 background-size: cover;
 text-align: center;
 }
+.button {
+padding: 15px 25px;
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #fff;
+background-color: #4CAF50;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #1569C7}
+
+.button:active {
+background-color: #368BC1;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
 .modal {
 display: none; /* Hidden by default */
 position: fixed; /* Stay in place */
